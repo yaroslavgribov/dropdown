@@ -1,0 +1,91 @@
+spacing = 15px
+
+.select
+  position relative
+  width 100%
+
+  &__input
+    position relative
+    
+    input 
+      width 100%
+      padding spacing 35px spacing spacing
+      border solid 1px gray
+      border-radius 5px
+      outline none
+
+    &--bottom
+      input 
+        border-bottom-left-radius 0
+        border-bottom-right-radius 0
+
+    &--top
+      input 
+        border-top-left-radius 0
+        border-top-right-radius 0
+      .select__placeholder
+        display none
+
+    &--focused
+      .select__placeholder
+        top 0
+        left (spacing / 2)
+        padding 0 (spacing / 2)
+        font-size 12px
+    .chevron
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      margin-top: -2px;
+      font-style: normal;
+      font-size: 8px
+
+  &__placeholder
+    position absolute
+    top 50%
+    left spacing
+    transform translateY(-50%)
+    z-index 10
+
+    background-color white
+
+    transition top ease-in-out .3s
+
+  &__list
+    display none
+    position absolute
+    overflow auto
+    max-height calc(44px * 5)
+    width 100%
+    border solid 1px gray
+    border-radius 5px
+    
+    &--open 
+      display block
+
+    &--bottom 
+      top 100%
+      border-top-left-radius 0
+      border-top-right-radius 0
+      border-top 0
+    
+    &--top
+      bottom 100%
+      border-bottom-left-radius 0
+      border-bottom-right-radius 0
+      border-bottom 0
+
+  &__item 
+    padding spacing
+    background-color white
+
+    &:hover
+      background-color lighten(lightblue, 60%)
+      cursor pointer
+
+    &--highlight 
+      background-color lighten(lightblue, 40%)
+    
+    .highlight
+      color orange
+      text-decoration underline

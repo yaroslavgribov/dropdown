@@ -1,0 +1,32 @@
+html
+  font 14px/1 'Helvetica', 'Arial', sans-serif
+
+body
+  background white
+
+.demo 
+  max-width 500px
+  margin 0 auto
+  padding 0 20px
+  
+  &__header 
+    ul 
+      display none
+
+      @media screen and (min-width: 376px) 
+        display block  
+
+  &__controls 
+    display none
+
+    @media screen and (min-width: 376px) 
+      display block    
+
+  &__container 
+    position relative
+    height 70vh
+
+.select-container
+  position absolute
+  width 100%
+  padding 20px 0
